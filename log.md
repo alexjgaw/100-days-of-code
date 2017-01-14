@@ -23,3 +23,11 @@
 **Thoughts:** This was an interesting day. First, I was awakened well before I meant to be by my asshole cat (whom I love despite her being an asshole). I feel pretty good about the fact that even though I didn't want to be up, I went to my desk, applied to a job, and got to work coding. The API I found was a *bad* idea for right now. It didn't require a key, which was nice, but you accessed a quote by using a URL-encoded method and arguments. I tried to access it with a normal ajax request and got an access-control-allow-origin error. I tried to switch to jsonp, but ran into issues with the fact that the getQuote method was URL encoded. I tried appending a script tag to the body but it seemed like CodePen wouldn't let you do that. In any case, after messing with it for some time I decided to just go with the API that the example used and figure out how to use a key. Surprise surprise, it was really easy. There's a chance I'll go back and make this app outside of CodePen so I can try the append solution, but for now screw that. Definitely got more than my hour for today, and I got a good taste of important concepts like Same Origin Policy, Cross-Origin Resource Sharing, and API keys.
 
 **Link to work:** [Random Quote Generator](http://codepen.io/alexjgaw/full/WxXbJX/)
+
+### Day 3: January 14, 2017
+
+**Today's Progress**: Started and finished local weather app
+
+**Thoughts:** I'm proud of myself for coding on the weekend. This app wasn't too difficult but I'm very glad to be getting practice using APIs. The app is more or less finished, having satisfied the user stories in the prompt, but I want to go back and figure out the Unsplash API so I can have the background image be the result of searching Unsplash using the weather description from the weather API. Other than the APIs, I got some good practice thinking about which variables should be `const` vs `var` and what should be global vs scoped to a function. Also good thinking about asynchronous operations and assignments within callbacks. At first I tried to set variables within the callback for the `get` method and then access them outside of it, but quickly remembered that when I was trying to access the variables in the global execution context they were still undefined. Neat stuff!
+
+**Link to work:** [Local weather app](http://codepen.io/alexjgaw/full/rjLvqR/)
